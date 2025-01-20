@@ -1,0 +1,69 @@
+Description des colonnes
+Unnamed: 0 :
+
+Généralement une colonne d'index créée automatiquement lors de l'importation d'un fichier (par exemple, un fichier CSV).
+Action : Si ce n'est pas utile, vous pouvez la supprimer.
+track_id :
+
+Identifiant unique pour chaque piste.
+Action : Assurez-vous qu'il est unique et qu'il n'y a pas de doublons.
+artists :
+
+Nom(s) de l'artiste ou des artistes.
+Action : Si plusieurs artistes sont listés dans une seule cellule, vous pourriez les séparer.
+album_name :
+
+Nom de l'album de la piste.
+track_name :
+
+Nom de la chanson.
+popularity :
+
+Score de popularité de la piste, souvent entre 0 et 100.
+Action : Peut être utile pour trier ou analyser les pistes populaires.
+duration_ms :
+
+Durée de la chanson en millisecondes.
+Action : Convertissez cette colonne en minutes et secondes pour plus de lisibilité.
+explicit :
+
+Indique si la piste contient des paroles explicites (1 pour oui, 0 pour non).
+danceability :
+
+Score mesurant si la piste est dansante (entre 0 et 1).
+energy :
+
+Score mesurant l'intensité et l'activité perçues (entre 0 et 1).
+key :
+
+Touche musicale de la piste (0 à 11, correspondant aux demi-tons).
+loudness :
+
+Mesure de la sonie en décibels (généralement négatif).
+mode :
+
+Mode de la piste (majeur : 1, mineur : 0).
+speechiness :
+
+Mesure de la quantité de paroles dans une piste (entre 0 et 1).
+acousticness :
+
+Score mesurant la probabilité que la piste soit acoustique (entre 0 et 1).
+instrumentalness :
+
+Score mesurant si la piste est principalement instrumentale (entre 0 et 1).
+liveness :
+
+Probabilité qu'une piste ait été enregistrée en live (entre 0 et 1).
+valence :
+
+Mesure du caractère émotionnel de la piste (heureux, joyeux, positif = proche de 1).
+tempo :
+
+Tempo de la piste en battements par minute (BPM).
+time_signature :
+
+Signature temporelle de la piste (ex. : 4 pour 4/4).
+track_genre :
+
+Genre de la piste.

@@ -1,0 +1,7 @@
+streamlit
+pandas
+plotly
+torch
+transformers
+plotly-express
+sentencepiece  
