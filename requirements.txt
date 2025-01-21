@@ -4,5 +4,5 @@ torch
 transformers
 plotly-express
 sentencepiece 
-
+matplotlib
 plotly
