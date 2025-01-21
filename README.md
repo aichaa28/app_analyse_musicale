@@ -28,22 +28,24 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 ## Project Structure
+
 Here is the structure of the project:
-├── .github/
-│   └── workflows/                  # Contains GitHub actions for continuous integration
-├── __pycache__/                    # Compiled Python files
-├── README.md                       # This file
-├── app.py                          # The main Streamlit app file that integrates the dashboard and question answering functionality
-├── column_description.txt          # Describes the columns in the dataset
-├── dashboard.py                    # Contains functions for creating visualizations of the music data
-├── data_cleaning.ipynb             # Jupyter notebook used for cleaning and preprocessing the dataset
-├── dataset.csv                     # The dataset file containing music data used in the dashboard
-├── home_page.py                    # Handles the home page layout and features of the dashboard
-├── requirements.txt                # A list of required Python packages
-├── song_page.py                    # Displays details related to songs and artists
-├── tapas_model/                    # Folder containing the TAPAS model files
-│   ├── tapas_model.py              # Contains the integration of the TAPAS model for question answering on the music data
-├── test_dashboard.py               # Contains test cases for ensuring the functionality of the dashboard
+
+- `.github/`
+  - `workflows/`                  # Contains GitHub actions for continuous integration
+- `__pycache__/`                    # Compiled Python files
+- `README.md`                       # This file
+- `app.py`                          # The main Streamlit app file that integrates the dashboard and question answering functionality
+- `column_description.txt`          # Describes the columns in the dataset
+- `dashboard.py`                    # Contains functions for creating visualizations of the music data
+- `data_cleaning.ipynb`             # Jupyter notebook used for cleaning and preprocessing the dataset
+- `dataset.csv`                     # The dataset file containing music data used in the dashboard
+- `home_page.py`                    # Handles the home page layout and features of the dashboard
+- `requirements.txt`                # A list of required Python packages
+- `song_page.py`                    # Displays details related to songs and artists
+- `tapas_model/`                    # Folder containing the TAPAS model files
+  - `tapas_model.py`                # Contains the integration of the TAPAS model for question answering on the music data
+- `test_dashboard.py`               # Contains test cases for ensuring the functionality of the dashboard
 
 ## Features
 
