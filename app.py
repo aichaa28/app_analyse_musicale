@@ -1,9 +1,8 @@
 import streamlit as st
 import pandas as pd
-from dashboard import dashboard
 from home_page import home_page
 from song_page import song_analysis
-
+from dashboard import music_dashboard
 # Charger les données
 @st.cache_data
 def load_data():
@@ -23,7 +22,7 @@ with tabs[1]:
     st.header("Dashboard")
     st.write("This section shows an overview of the data and metrics related to the music app.")
     df = load_data()  # Charger les données lorsque la page de dashboard est ouverte
-    dashboard(df)
+    music_dashboard(df)
 
 with tabs[2]:
     st.title("Select a Song for Analysis")

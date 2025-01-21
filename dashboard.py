@@ -3,14 +3,10 @@ import plotly.express as px
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
-from tapas_model import get_answer_from_tapas
+from tapas_model import process_first_block
 
-green_colors = [
-    "#008000", "#8FBC8F", "#98FB98", "#556B2F", "#90EE90", 
-    "#7CFC00", "#2E8B57"]
-
-# Dashboard page
-def dashboard(df):
+def music_dashboard(df):
+    # Dashboard page
     st.title("🎵 Music Dashboard")
     st.subheader("Analyze music genres and characteristics to maximize sales!")
 
@@ -64,6 +60,7 @@ def dashboard(df):
         **Interpretation:** Genres with higher average popularity are more likely to attract more listeners and maximize sales.
         """
     )
+
     # Visualization 2: Top artists by average popularity
     st.markdown("## Top Artists by Average Popularity")
 
@@ -110,7 +107,7 @@ def dashboard(df):
     # Attributes to analyze: energy, key, loudness, mode, speechiness, etc.
     attributes = ['energy', 'loudness', 'speechiness', 'acousticness', 'instrumentalness', 'liveness', 'tempo']
 
-        # Show analysis for each attribute
+    # Show analysis for each attribute
     attribute_data = {
         'Attribute': [],
         'Average Value': [],
@@ -127,10 +124,8 @@ def dashboard(df):
 
     # Display the table
     st.table(attribute_df)
-        # Provide some interpretation based on the attribute (general interpretation)
 
-
-    # Final interpretation
+    # Provide some interpretation based on the attribute (general interpretation)
     st.markdown(
         """
         **Interpretation:** The combination of these musical features helps define the unique style of an artist. Artists who excel in energy, loudness, and valence are likely to produce tracks that resonate well with a wide audience, boosting their popularity and success.
@@ -184,5 +179,6 @@ def dashboard(df):
     st.markdown("## Ask a Question")
     question = st.text_input("What would you like to know about the music data?")
     if question:
-        answer = get_answer_from_tapas(df, question)
-        st.write(f"**Answer**: {answer}")
+        st.markdown(f"**Question  :** {question}")
+        answer = process_first_block(df.astype(str), question, max_rows=256)
+        st.markdown(f"**answer :** {answer}")
