@@ -4,8 +4,7 @@ torch==2.5.1
 transformers==4.48.1
 plotly-express==0.4.1
 sentencepiece==0.2.0
-pytest==8.3.4
-unittest.mock
+pytest==7.4.2  # Version compatible avec Python 3.12
 matplotlib
 plotly
 seaborn
