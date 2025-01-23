@@ -43,8 +43,7 @@ Here is the structure of the project:
 - `home_page.py`                    Handles the home page layout and features of the dashboard
 - `requirements.txt`                A list of required Python packages
 - `song_page.py`                    Displays details related to songs and artists
-- `tapas_model/`                    Folder containing the TAPAS model files
-  - `tapas_model.py`                Contains the integration of the TAPAS model for question answering on the music data
+- `tapas_model_code.py`             Contains the integration of the TAPAS model for question answering on the music data
 - `test_dashboard.py`               Contains test cases for ensuring the functionality of the dashboard
 
 ## Features
