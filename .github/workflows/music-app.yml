@@ -1,49 +1,35 @@
-name: Python Tests
+name: unit-tests
 
 on:
   push:
-    branches:
-      - main  # Exécuter les tests lors d'un push sur la branche main
+    branches: 
+      - main  # Déclenche sur un push vers la branche main
   pull_request:
-    branches:
-      - main  # Exécuter les tests pour les pull requests vers main
+    branches: 
+      - main  # Déclenche pour les pull requests vers la branche main
 
 jobs:
   test:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3  # Récupère le code du dépôt
+    - name: Checkout code
+      uses: actions/checkout@v4  # Vérifie le code du dépôt
 
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v2
       with:
-        python-version: '3.9'  # Vous pouvez spécifier la version de Python
-
-    - name: Cache Python dependencies
-      uses: actions/cache@v3
-      with:
-        path: |
-          ~/.cache/pip
-          **/site-packages
-        key: ${{ runner.os }}-python-${{ hashFiles('**/requirements.txt') }}
-        restore-keys: |
-          ${{ runner.os }}-python-
+        python-version: '3.12.4'  # Spécifie la version de Python
 
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt  # Installez les dépendances du projet
-        pip install pytest pytest-cov  # Installez Pytest et les outils de couverture
+        pip install -r requirements.txt  # Installe les dépendances à partir de requirements.txt
+
+    - name: Install Pytest
+      run: |
+        pip install pytest  # Installe pytest pour exécuter les tests
 
     - name: Run tests
       run: |
-        pytest --cov=app_analyse_musicale  # Exécute les tests avec mesure de la couverture
-
-    - name: Upload coverage report
-      if: always()
-      uses: actions/upload-artifact@v3  # Utilisation de la dernière version de l'action
-      with:
-        name: coverage-report
-        path: .coverage
+        pytest  # Exécute les tests avec pytest
