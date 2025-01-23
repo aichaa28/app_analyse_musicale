@@ -8,8 +8,5 @@ pytest
 unittest.mock
 matplotlib
 plotly
-<<<<<<< HEAD:requirement.txt
 seaborn
-=======
-seaborn
->>>>>>> da839be7e492725ecfb91b4508a225e7ef4c215c:requirements.txt
+
