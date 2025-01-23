@@ -1,10 +1,10 @@
 
 import torch
-from transformers import TapasForQuestionAnswering, TapasTokenizer
+from transformers import AutoTokenizer, AutoModelForTableQuestionAnswering
 
-# Charger le modèle et le tokenizer depuis Hugging Face
-model = TapasForQuestionAnswering.from_pretrained("tapas_model")
-tokenizer = TapasTokenizer.from_pretrained("tapas_tokenizer")
+tokenizer = AutoTokenizer.from_pretrained("google/tapas-large-finetuned-wtq")
+model = AutoModelForTableQuestionAnswering.from_pretrained("google/tapas-large-finetuned-wtq")
+
 
 def get_answer_from_tapas(df, question):
     if not question.strip():
