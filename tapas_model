@@ -1,4 +1,0 @@
-from transformers import TapasTokenizer, TapasForQuestionAnswering
-import torch
-
-# Charger le modèle TAPAS et son tokenizer
