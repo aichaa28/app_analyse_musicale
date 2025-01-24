@@ -56,5 +56,5 @@ Here is the structure of the project:
 
 ## Deployed Application
 You can access the deployed application via the following link:  
-[Go to the Deployed Application]((https://aichaa28-app-analyse-musicale-app-sasvso.streamlit.app/))
+[Go to the Deployed Application](https://aichaa28-app-analyse-musicale-app-sasvso.streamlit.app/)
 
