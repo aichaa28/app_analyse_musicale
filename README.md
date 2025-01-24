@@ -7,6 +7,7 @@ This project provides an interactive music dashboard built with **Streamlit** fo
 - [Getting Started](#getting-started)
 - [Project Structure](#project-structure)
 - [Features](#features)
+- [Deployed Application](#deployed-application)
 
 ## Overview
 
@@ -53,4 +54,7 @@ Here is the structure of the project:
 - **Track Features by Genre**: Shows how features like energy, tempo, and valence differ by genre.
 - **TAPAS Question Answering**: Provides an interface for asking questions about the music data, powered by the TAPAS model.
 
+## Deployed Application
+You can access the deployed application via the following link:  
+[Go to the Deployed Application]((https://aichaa28-app-analyse-musicale-app-sasvso.streamlit.app/))
 
